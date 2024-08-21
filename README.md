@@ -1,5 +1,4 @@
 # Sentiment Analysis and Visualisation of Stock News
-# Sentiment Analysis and Visualization for Stock Market Data
 
 ## Project Overview
 
@@ -48,7 +47,7 @@ This project aims to create a powerful tool for performing sentiment analysis on
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/sentiment-analysis-stocks.git
+git clone https://github.com/gappeah/sentiment-analysis-stocks.git
 
 # Navigate to the project directory
 cd sentiment-analysis-stocks
