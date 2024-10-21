@@ -11,8 +11,10 @@ tickers = ['AMD ', 'META', 'AAPL', 'AMZN', 'GOOG', 'MSFT', 'NVDA', 'TSLA', 'SPY'
 
 for ticker in tickers:
     url = finviz_url_base + ticker
-    print(f'Getting data for {ticker}...')
-    
-    
     request = requests(url=url, header={'user-agent': 'my-app/0.0.1'})
-    response = request.content
+    print(f'Getting data for {ticker}...')
+
+    response = urlopen(request)
+    print(response)
+    
+    
