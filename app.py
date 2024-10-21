@@ -4,10 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Function to generate the Nike search URL
-def generate_nike_url(product_name, page_number=1):
-    base_url = f'https://www.nike.com/gb/w?q={product_name.replace(" ", "+")}&page={page_number}'
-    return base_url
+# Establish the base URL for scraping
+finviz_url_base = 'https://finviz.com/quote.ashx?t='
 
 # Function to fetch the HTML content from Nike's website
 def get_data(url):
