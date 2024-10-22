@@ -1,33 +1,50 @@
-import requests
+from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
+import pandas as pd
+import matplotlib.pyplot as plt
 
-# Base URL for scraping
-finviz_url_base = 'https://finviz.com/quote.ashx?t='
+finviz_url = 'https://finviz.com/quote.ashx?t='
+tickers = ['AMZN', 'GOOG', 'FB']
 
-# List of tickers to scrape
-tickers = ['AMD', 'META', 'AAPL', 'AMZN', 'GOOG', 'MSFT', 'NVDA', 'TSLA', 'SPY']
-
-# Dictionary to hold news tables for each ticker
 news_tables = {}
-
 for ticker in tickers:
-    url = finviz_url_base + ticker
-    request = requests.get(url=url, headers={'user-agent': 'my-app/0.0.1'})
-    print(f'Getting data for {ticker}...')
+    url = finviz_url + ticker
 
-    # Parse the HTML content using BeautifulSoup
-    soup = BeautifulSoup(request.text, 'html.parser')
+    req = Request(url=url, headers={'user-agent': 'my-app'})
+    response = urlopen(req)
 
-    # Find the news table using its ID
-    news_table = soup.find(id='news-table')
-    
-    # Store the news table HTML in the dictionary, with the ticker as the key
-    if news_table:
-        news_tables[ticker] = news_table
-    else:
-        print(f'No news table found for {ticker}')
-    
-    break  # Just to test the first ticker, remove or modify this for all tickers
+    html = BeautifulSoup(response, features='html.parser')
+    news_table = html.find(id='news-table')
+    news_tables[ticker] = news_table
 
-# Visualize the result
-print(news_tables)
+parsed_data = []
+
+for ticker, news_table in news_tables.items():
+
+    for row in news_table.findAll('tr'):
+
+        title = row.a.text
+        date_data = row.td.text.split(' ')
+
+        if len(date_data) == 1:
+            time = date_data[0]
+        else:
+            date = date_data[0]
+            time = date_data[1]
+
+        parsed_data.append([ticker, date, time, title])
+
+df = pd.DataFrame(parsed_data, columns=['ticker', 'date', 'time', 'title'])
+
+vader = SentimentIntensityAnalyzer()
+
+f = lambda title: vader.polarity_scores(title)['compound']
+df['compound'] = df['title'].apply(f)
+df['date'] = pd.to_datetime(df.date).dt.date
+
+plt.figure(figsize=(10,8))
+mean_df = df.groupby(['ticker', 'date']).mean().unstack()
+mean_df = mean_df.xs('compound', axis="columns")
+mean_df.plot(kind='bar')
+plt.show()
