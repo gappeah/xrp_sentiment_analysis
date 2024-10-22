@@ -1,6 +1,6 @@
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -11,7 +11,8 @@ news_tables = {}
 for ticker in tickers:
     url = finviz_url + ticker
 
-    req = Request(url=url, headers={'user-agent': 'my-app'})
+    request = requests.get(url=url, headers={'user-agent': 'my-app/0.0.1'})
+
     response = urlopen(req)
 
     html = BeautifulSoup(response, features='html.parser')
@@ -39,8 +40,10 @@ df = pd.DataFrame(parsed_data, columns=['ticker', 'date', 'time', 'title'])
 
 vader = SentimentIntensityAnalyzer()
 
-f = lambda title: vader.polarity_scores(title)['compound']
-df['compound'] = df['title'].apply(f)
+def get_compound_score(title):
+    return vader.polarity_scores(title)['compound']
+
+df['compound'] = df['title'].apply(get_compound_score)
 df['date'] = pd.to_datetime(df.date).dt.date
 
 plt.figure(figsize=(10,8))
