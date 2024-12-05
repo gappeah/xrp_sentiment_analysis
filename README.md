@@ -1,4 +1,4 @@
-# Sentiment Analysis and Visualisation of Stock News
+# Sentiment Analysis and Visualisation of XRP (Ripple)
 
 ## Project Overview
 
