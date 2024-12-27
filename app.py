@@ -88,7 +88,7 @@ class XRPSentimentAnalyzer:
             DataFrame with XRP price and volume data
         """
         xrp = yf.download("XRP-USD", start=start_date, end=end_date)
-        xrp["Returns"] = xrp["Adj Close"].pct_change()
+        xrp["Returns"] = xrp["Adj Close"].pct_change() # Traceback for line 91
         xrp["Volatility"] = xrp["Returns"].rolling(window=20).std()
         return xrp
 
