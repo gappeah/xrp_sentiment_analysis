@@ -229,9 +229,10 @@ def main():
 
     # Create sentiment DataFrame
     sentiment_df = pd.DataFrame(sentiment_results)
-    #
+    print(sentiment_df)
     
     sentiment_df["date"] = pd.to_datetime(sentiment_df["date"]) # Error in  232
+    
     
     
     sentiment_df.set_index("date", inplace=True)
