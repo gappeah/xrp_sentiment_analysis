@@ -88,7 +88,7 @@ class XRPSentimentAnalyzer:
             DataFrame with XRP price and volume data
         """
         xrp = yf.download("XRP-USD", start=start_date, end=end_date)
-        xrp["Returns"] = xrp["Adj Close"].pct_change() # Traceback for line 91
+        xrp["Returns"] = xrp["Close"].pct_change() # Replace "Adj Close" with "Close"
         xrp["Volatility"] = xrp["Returns"].rolling(window=20).std()
         return xrp
 
@@ -102,7 +102,7 @@ class XRPSentimentAnalyzer:
         Returns:
             Preprocessed text string
         """
-        # Convert to lowercase
+        # Conv ert to lowercase
         text = text.lower()
 
         # Remove URLs
@@ -229,7 +229,11 @@ def main():
 
     # Create sentiment DataFrame
     sentiment_df = pd.DataFrame(sentiment_results)
-    sentiment_df["date"] = pd.to_datetime(sentiment_df["date"])
+    #
+    
+    sentiment_df["date"] = pd.to_datetime(sentiment_df["date"]) # Error in  232
+    
+    
     sentiment_df.set_index("date", inplace=True)
 
     # Create visualizations
