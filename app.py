@@ -50,8 +50,7 @@ class XRPSentimentAnalyzer:
         """
         news_data = []
         sources = [
-            "https://coinmarketcap.com/currencies/xrp/news/",
-            "https://ripple.com/insights/",
+            "https://crypto.news/?s=xrp"
         ]
 
         for source in sources:
@@ -208,11 +207,24 @@ def main():
     end_date = datetime.now()
     start_date = end_date - timedelta(days=30)
 
-    # Collect data
-    news_data = analyzer.scrape_news(days_back=30)
-    market_data = analyzer.get_market_data(
-        start_date.strftime("%Y-%m-%d"), end_date.strftime("%Y-%m-%d")
-    )
+    # Instead of scraping, use sample data for testing
+    news_data = [
+        {
+            "title": "XRP Price Surges Amid New Partnership",
+            "date": datetime.now().strftime("%Y-%m-%d"),
+            "source": "sample"
+        },
+        {
+            "title": "Ripple Announces Major Development",
+            "date": (datetime.now() - timedelta(days=1)).strftime("%Y-%m-%d"),
+            "source": "sample"
+        },
+        {
+            "title": "New Regulatory Framework for XRP",
+            "date": (datetime.now() - timedelta(days=2)).strftime("%Y-%m-%d"),
+            "source": "sample"
+        }
+    ]
 
     # Process news data
     sentiment_results = []
