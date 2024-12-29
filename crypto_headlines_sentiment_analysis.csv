@@ -1,361 +1,361 @@
-headline,cleaned_headline,sentiment_score
+headline,cleaned_headline,textblob_score,vader_score,average_score,sentiment_category
 "
 
                                 TON and XRP investors are pivoting to this $0.0007 crypto with 700% returns                            
-",ton xrp investor pivoting 0 0007 crypto 700 return,0.0
+",ton xrp investor pivoting 0 0007 crypto 700 return,0.0,0.0,0.0,Neutral
 "
 
                                 Top analyst shares multiple XRP predictions, while Lightchain AI heats up for surge                            
-",top analyst share multiple xrp prediction lightchain ai heat surge,0.25
+",top analyst share multiple xrp prediction lightchain ai heat surge,0.25,0.4588,0.3544,Slightly Bullish
 "
 
                                 AI predicts this new altcoin to mimic XRP and Solana’s success                            
-",ai predicts new altcoin mimic xrp solana success,0.21818181818181817
+",ai predicts new altcoin mimic xrp solana success,0.21818181818181817,0.5719,0.39504090909090905,Slightly Bullish
 "
 
                                 Why staking Lightchain AI could be a smarter wealth strategy than holding XRP                            
-",staking lightchain ai could smarter wealth strategy holding xrp,0.0
+",staking lightchain ai could smarter wealth strategy holding xrp,0.0,0.7351,0.36755,Slightly Bullish
 "
 
                                 XRP and ADA investors expect big gains, but this new crypto is poised to redefine wealth in 2025                            
-",xrp ada investor expect big gain new crypto poised redefine wealth 2025,0.06818181818181818
+",xrp ada investor expect big gain new crypto poised redefine wealth 2025,0.06818181818181818,0.8225,0.44534090909090907,Slightly Bullish
 "
 
                                 Massive win for Dogen: $4M presale while Kaspa and XRP lag behind                            
-",massive win dogen 4m presale kaspa xrp lag behind,0.13333333333333333
+",massive win dogen 4m presale kaspa xrp lag behind,0.13333333333333333,0.34,0.2366666666666667,Slightly Bullish
 "
 
                                 This new low-cap PayFi token could soar 40,000% as analysts call it XRP 2.0                            
-",new low cap payfi token could soar 40 000 analyst call xrp 2 0,0.06818181818181818
+",new low cap payfi token could soar 40 000 analyst call xrp 2 0,0.06818181818181818,-0.2732,-0.10250909090909091,Neutral
 "
 
                                 XRP price declines, but PropiChain gains momentum with its AI-powered real estate features                            
-",xrp price decline propichain gain momentum ai powered real estate feature,0.2
+",xrp price decline propichain gain momentum ai powered real estate feature,0.2,0.5267,0.36334999999999995,Slightly Bullish
 "
 
                                 Paradigm shift: XRP holders eye Lightchain AI for future investment                            
-",paradigm shift xrp holder eye lightchain ai future investment,0.0
+",paradigm shift xrp holder eye lightchain ai future investment,0.0,0.0,0.0,Neutral
 "
 
                                 Kaspa ETF rumors, XRP SEC appeal, Dogen $4M presale raise                            
-",kaspa etf rumor xrp sec appeal dogen 4m presale raise,-0.1
+",kaspa etf rumor xrp sec appeal dogen 4m presale raise,-0.1,0.0,-0.05,Neutral
 "
 
                                 XRP ETF incoming; Ripple holders prepare for gains like DTX Exchange in 2025                            
-",xrp etf incoming ripple holder prepare gain like dtx exchange 2025,0.0
+",xrp etf incoming ripple holder prepare gain like dtx exchange 2025,0.0,0.7096,0.3548,Slightly Bullish
 "
 
                                 MEXC lists XRPL meme coin PHNIX                            
-",mexc list xrpl meme coin phnix,0.0
+",mexc list xrpl meme coin phnix,0.0,0.0,0.0,Neutral
 "
 
                                 XRP to reach $7.50 in the next 45 days while this $0.150 altcoin looks to breach $10                            
-",xrp reach 7 50 next 45 day 0 150 altcoin look breach 10,0.0
+",xrp reach 7 50 next 45 day 0 150 altcoin look breach 10,0.0,0.0258,0.0129,Neutral
 "
 
                                 This new viral altcoin named the “XRP killer” could even surpass Solana                            
-",new viral altcoin named xrp killer could even surpass solana,0.13636363636363635
+",new viral altcoin named xrp killer could even surpass solana,0.13636363636363635,-0.6486,-0.2561181818181818,Slightly Bearish
 "
 
                                 Why XRP traders are switching to Lightchain AI for smarter long-term gains                            
-",xrp trader switching lightchain ai smarter long term gain,-0.05
+",xrp trader switching lightchain ai smarter long term gain,-0.05,0.7506,0.3503,Slightly Bullish
 "
 
                                 Will XRP price surge in 2025 if the SEC approves Ripple ETF?                            
-",xrp price surge 2025 sec approves ripple etf,-0.1
+",xrp price surge 2025 sec approves ripple etf,-0.1,0.4019,0.15094999999999997,Neutral
 "
 
                                 Altcoins set for the biggest 2025 gains: DOGE, SOL, RBLK, XRP                            
-",altcoins set biggest 2025 gain doge sol rblk xrp,0.0
+",altcoins set biggest 2025 gain doge sol rblk xrp,0.0,0.5267,0.26335,Slightly Bullish
 "
 
                                 Bullish signals for Litecoin and XRP, Lunex token targets massive 2025 surge                            
-",bullish signal litecoin xrp lunex token target massive 2025 surge,0.0
+",bullish signal litecoin xrp lunex token target massive 2025 surge,0.0,0.0,0.0,Neutral
 "
 
                                 XRP targets $10 and $35, Dogen excites investors with projected 15,900% surge                            
-",xrp target 10 35 dogen excites investor projected 15 900 surge,0.0
+",xrp target 10 35 dogen excites investor projected 15 900 surge,0.0,0.4767,0.23835,Slightly Bullish
 "
 
                                 Polygon’s presale token captures XRP and Cardano investors’ attention                            
-",polygon presale token capture xrp cardano investor attention,0.0
+",polygon presale token capture xrp cardano investor attention,0.0,0.0,0.0,Neutral
 "
 
                                 Bitcoin rally signal: XRP, SOL, NEAR, DOGEN, and DOT poised to explode                            
-",bitcoin rally signal xrp sol near dogen dot poised explode,0.1
+",bitcoin rally signal xrp sol near dogen dot poised explode,0.1,0.25,0.175,Neutral
 "
 
                                 XRP ETF rumors heat up, but this rival altcoin could deliver 18,000% gains by January 1                            
-",xrp etf rumor heat rival altcoin could deliver 18 000 gain january 1,0.0
+",xrp etf rumor heat rival altcoin could deliver 18 000 gain january 1,0.0,0.5267,0.26335,Slightly Bullish
 "
 
                                 XRP targets $5, while RCO Finance stands out with its unique AI features                            
-",xrp target 5 rco finance stand unique ai feature,0.375
+",xrp target 5 rco finance stand unique ai feature,0.375,0.0,0.1875,Neutral
 "
 
                                 Seasoned trader: XRP firmly above $1, ADA and LCAI to steal the spotlight                            
-",seasoned trader xrp firmly 1 ada lcai steal spotlight,0.024999999999999994
+",seasoned trader xrp firmly 1 ada lcai steal spotlight,0.024999999999999994,-0.4939,-0.23445,Slightly Bearish
 "
 
                                 Upcoming ERC-20 token listing predicted to deliver 550% gains in January, mirroring XRP’s surge                            
-",upcoming erc 20 token listing predicted deliver 550 gain january mirroring xrp surge,0.0
+",upcoming erc 20 token listing predicted deliver 550 gain january mirroring xrp surge,0.0,0.5267,0.26335,Slightly Bullish
 "
 
                                 Shiba Inu whale expects this coin to outperform DOGE and XRP in the $1 price race                            
-",shiba inu whale expects coin outperform doge xrp 1 price race,0.0
+",shiba inu whale expects coin outperform doge xrp 1 price race,0.0,0.0,0.0,Neutral
 "
 
                                 Post-correction boom – crypto analysts predict this altcoin will outperform SOL and XRP                            
-",post correction boom crypto analyst predict altcoin outperform sol xrp,0.0
+",post correction boom crypto analyst predict altcoin outperform sol xrp,0.0,0.0,0.0,Neutral
 "
 
                                 XRP price slowly forms a rare pattern: is a rebound coming?                            
-",xrp price slowly form rare pattern rebound coming,-2.7755575615628914e-17
+",xrp price slowly form rare pattern rebound coming,-2.7755575615628914e-17,0.0,-1.3877787807814457e-17,Neutral
 "
 
                                 Picking winners this bull run: XRP, SUI, or this new viral crypto                            
-",picking winner bull run xrp sui new viral crypto,0.13636363636363635
+",picking winner bull run xrp sui new viral crypto,0.13636363636363635,0.5859,0.36113181818181816,Slightly Bullish
 "
 
                                 When to sell: Cycle top price forecasts for XRP, Solana and Rollblock                            
-",sell cycle top price forecast xrp solana rollblock,0.5
+",sell cycle top price forecast xrp solana rollblock,0.5,0.2023,0.35115,Slightly Bullish
 "
 
                                 Experts say these 3 altcoins will rally 3,000% soon, and XRP isn’t one of them                            
-",expert say 3 altcoins rally 3 000 soon xrp one,0.0
+",expert say 3 altcoins rally 3 000 soon xrp one,0.0,0.0,0.0,Neutral
 "
 
                                 XRP’s $5, $10 goals are trending, but this altcoin with 7,400% potential takes the spotlight                            
-",xrp 5 10 goal trending altcoin 7 400 potential take spotlight,0.0
+",xrp 5 10 goal trending altcoin 7 400 potential take spotlight,0.0,0.0,0.0,Neutral
 "
 
                                 Analyst predicts XRP to defend $2 as ADA and Lightchain AI position for breakout surges                            
-",analyst predicts xrp defend 2 ada lightchain ai position breakout surge,0.0
+",analyst predicts xrp defend 2 ada lightchain ai position breakout surge,0.0,0.0,0.0,Neutral
 "
 
                                 Experts say these 3 altcoins will rally 3,000% soon, and XRP isn’t one of them                            
-",expert say 3 altcoins rally 3 000 soon xrp one,0.0
+",expert say 3 altcoins rally 3 000 soon xrp one,0.0,0.0,0.0,Neutral
 "
 
                                 Whales accumulate millions in this altcoin expected to lead Solana and XRP In 2025                            
-",whale accumulate million altcoin expected lead solana xrp 2025,-0.1
+",whale accumulate million altcoin expected lead solana xrp 2025,-0.1,0.0,-0.05,Neutral
 "
 
                                 Analysts forecast surge for SHIB, XRP amid downturn, but this new coin has risen 700%                            
-",analyst forecast surge shib xrp amid downturn new coin risen 700,0.13636363636363635
+",analyst forecast surge shib xrp amid downturn new coin risen 700,0.13636363636363635,0.0,0.06818181818181818,Neutral
 "
 
                                 Bithumb faces temporary XRP withdrawal delays as volume increases                            
-",bithumb face temporary xrp withdrawal delay volume increase,0.0
+",bithumb face temporary xrp withdrawal delay volume increase,0.0,0.0258,0.0129,Neutral
 "
 
                                 AI foresees this viral crypto to outshine XRP, SHIB in 2025                            
-",ai foresees viral crypto outshine xrp shib 2025,0.0
+",ai foresees viral crypto outshine xrp shib 2025,0.0,0.0,0.0,Neutral
 "
 
                                 Best crypto for those who missed XRP’s November pump                            
-",best crypto missed xrp november pump,1.0
+",best crypto missed xrp november pump,1.0,0.4588,0.7294,Bullish
 "
 
                                 SOL’s $400 rally and XRP’s $10 goal highlight bullish momentum as XYZ soars                            
-",sol 400 rally xrp 10 goal highlight bullish momentum xyz soar,0.0
+",sol 400 rally xrp 10 goal highlight bullish momentum xyz soar,0.0,0.34,0.17,Neutral
 "
 
                                 ADA’s breakout imminent; New altcoin set to outshine XRP’s 2x surge                            
-",ada breakout imminent new altcoin set outshine xrp 2x surge,0.13636363636363635
+",ada breakout imminent new altcoin set outshine xrp 2x surge,0.13636363636363635,0.0,0.06818181818181818,Neutral
 "
 
                                 Traders wary of end of year market swings switch from XRP, Solana to this new altcoin                            
-",trader wary end year market swing switch xrp solana new altcoin,-0.18181818181818182
+",trader wary end year market swing switch xrp solana new altcoin,-0.18181818181818182,0.0,-0.09090909090909091,Neutral
 "
 
                                 New exchange token set to 30x this bull run as SOL aims for new ATH and XRP surges 130%                            
-",new exchange token set 30x bull run sol aim new ath xrp surge 130,0.13636363636363635
+",new exchange token set 30x bull run sol aim new ath xrp surge 130,0.13636363636363635,0.0,0.06818181818181818,Neutral
 "
 
                                 Cardano, Dogecoin, XRP, and XYZVerse: Bold 2025 bull run price predictions inside                            
-",cardano dogecoin xrp xyzverse bold 2025 bull run price prediction inside,0.3333333333333333
+",cardano dogecoin xrp xyzverse bold 2025 bull run price prediction inside,0.3333333333333333,0.3818,0.35756666666666664,Slightly Bullish
 "
 
                                 XRP price slips as RLUSD market cap hits $53m, liquidations rise                            
-",xrp price slip rlusd market cap hit 53m liquidation rise,0.0
+",xrp price slip rlusd market cap hit 53m liquidation rise,0.0,0.0,0.0,Neutral
 "
 
                                 XYZVerse to rival XRP & Cardano in the bull market at $0.1                            
-",xyzverse rival xrp cardano bull market 0 1,0.0
+",xyzverse rival xrp cardano bull market 0 1,0.0,0.0,0.0,Neutral
 "
 
                                 Stellar’s XLM price rises as XRP rebounds, but gains may be brief                            
-",stellar xlm price rise xrp rebound gain may brief,0.125
+",stellar xlm price rise xrp rebound gain may brief,0.125,0.5267,0.32585,Slightly Bullish
 "
 
                                 XRP price rises ahead of RLUSD launch, but a reversal is possible                            
-",xrp price rise ahead rlusd launch reversal possible,0.0
+",xrp price rise ahead rlusd launch reversal possible,0.0,0.0,0.0,Neutral
 "
 
                                 Last chance to get DTX Exchange before it soars, set to follow ETH, XRP                            
-",last chance get dtx exchange soar set follow eth xrp,0.0
+",last chance get dtx exchange soar set follow eth xrp,0.0,0.25,0.125,Neutral
 "
 
                                 XRP and ADA growth in question: New meme coin to redefine the market in 2025                            
-",xrp ada growth question new meme coin redefine market 2025,0.13636363636363635
+",xrp ada growth question new meme coin redefine market 2025,0.13636363636363635,0.3818,0.2590818181818182,Slightly Bullish
 "
 
                                 AI predicts XRP surpassing ETH this cycle — but the real crypto winner could be XYZ                            
-",ai predicts xrp surpassing eth cycle real crypto winner could xyz,0.2
+",ai predicts xrp surpassing eth cycle real crypto winner could xyz,0.2,0.5859,0.39295,Slightly Bullish
 "
 
                                 DOGEN is gearing up for 25,000% returns, outshining XRP and DOGE gains                            
-",dogen gearing 25 000 return outshining xrp doge gain,0.0
+",dogen gearing 25 000 return outshining xrp doge gain,0.0,0.5267,0.26335,Slightly Bullish
 "
 
                                 Major accumulations of AVAX, XRP, and CATZILLA signal a potential 150x breakout                            
-",major accumulation avax xrp catzilla signal potential 150x breakout,0.03125
+",major accumulation avax xrp catzilla signal potential 150x breakout,0.03125,0.0,0.015625,Neutral
 "
 
                                 Trader who accurately predicted XRP’s rally past $1 now bets on Bonk and Yeti Ouro                            
-",trader accurately predicted xrp rally past 1 bet bonk yeti ouro,0.07500000000000004
+",trader accurately predicted xrp rally past 1 bet bonk yeti ouro,0.07500000000000004,0.0,0.03750000000000002,Neutral
 "
 
                                 Why selling XRP, SOL, and ADA in 30 days could unlock these altcoin gems                            
-",selling xrp sol ada 30 day could unlock altcoin gem,0.0
+",selling xrp sol ada 30 day could unlock altcoin gem,0.0,0.0,0.0,Neutral
 "
 
                                 Solana shows flag pattern as XRP holds above $2; DTX rolls out mega $1M giveaway                            
-",solana show flag pattern xrp hold 2 dtx roll mega 1m giveaway,0.0
+",solana show flag pattern xrp hold 2 dtx roll mega 1m giveaway,0.0,0.0,0.0,Neutral
 "
 
                                 XRP to surge post-stablecoin launch; analysts reveal 3 coins with 250x potential in 2025                            
-",xrp surge post stablecoin launch analyst reveal 3 coin 250x potential 2025,0.0
+",xrp surge post stablecoin launch analyst reveal 3 coin 250x potential 2025,0.0,0.0,0.0,Neutral
 "
 
                                 Crypto Strategist: XRP to remain above $2, XYZ and ADA target big moves                            
-",crypto strategist xrp remain 2 xyz ada target big move,0.0
+",crypto strategist xrp remain 2 xyz ada target big move,0.0,0.0,0.0,Neutral
 "
 
                                 5 XRP alternatives to move from $300 to $6000 by early 2025                            
-",5 xrp alternative move 300 6000 early 2025,0.1
+",5 xrp alternative move 300 6000 early 2025,0.1,0.0,0.05,Neutral
 "
 
                                 Wall Street bulls dump XRP, buy WallitIQ for potential 46,000% gain                            
-",wall street bull dump xrp buy wallitiq potential 46 000 gain,0.0
+",wall street bull dump xrp buy wallitiq potential 46 000 gain,0.0,0.2023,0.10115,Neutral
 "
 
                                 This could be the end of the bull run or time to buy XRP & DTX at low prices                            
-",could end bull run time buy xrp dtx low price,0.0
+",could end bull run time buy xrp dtx low price,0.0,-0.2732,-0.1366,Neutral
 "
 
                                 Analyst sees potential for SHIB as new altcoin and XRP show bullish indicators                            
-",analyst see potential shib new altcoin xrp show bullish indicator,0.06818181818181818
+",analyst see potential shib new altcoin xrp show bullish indicator,0.06818181818181818,0.0,0.03409090909090909,Neutral
 "
 
                                 XRP price slowly forms a bullish pattern: can Ripple hit $5                            
-",xrp price slowly form bullish pattern ripple hit 5,-0.30000000000000004
+",xrp price slowly form bullish pattern ripple hit 5,-0.30000000000000004,0.0,-0.15000000000000002,Neutral
 "
 
                                 XRP meets AI: Atua developer pledges $100m fund to develop AI tools for Ripple platforms                            
-",xrp meet ai atua developer pledge 100m fund develop ai tool ripple platform,0.0
+",xrp meet ai atua developer pledge 100m fund develop ai tool ripple platform,0.0,0.0,0.0,Neutral
 "
 
                                 New protocol attracts Avalanche and XRP investors by the thousands                            
-",new protocol attracts avalanche xrp investor thousand,0.13636363636363635
+",new protocol attracts avalanche xrp investor thousand,0.13636363636363635,0.4019,0.2691318181818182,Slightly Bullish
 "
 
                                 Double-digit rises for XRP and Cardano — past bull run patterns reemerge                            
-",double digit rise xrp cardano past bull run pattern reemerge,-0.125
+",double digit rise xrp cardano past bull run pattern reemerge,-0.125,0.0,-0.0625,Neutral
 "
 
                                 Dogen $3M presale momentum, XRP dethrones SOL in market cap, and AVAX inches toward $50                            
-",dogen 3m presale momentum xrp dethrones sol market cap avax inch toward 50,0.0
+",dogen 3m presale momentum xrp dethrones sol market cap avax inch toward 50,0.0,0.0,0.0,Neutral
 "
 
                                 Analyst sees XRP at $8.4, but this $0.02 altcoin looks to get there first                            
-",analyst see xrp 8 4 0 02 altcoin look get first,0.25
+",analyst see xrp 8 4 0 02 altcoin look get first,0.25,0.0,0.125,Neutral
 "
 
                                 XRP price to rally 24,544% as PropiChain doubles these gains, expert forecasts                            
-",xrp price rally 24 544 propichain double gain expert forecast,0.0
+",xrp price rally 24 544 propichain double gain expert forecast,0.0,0.5267,0.26335,Slightly Bullish
 "
 
                                 Cardano millionaire predicts this sub-$1 XRP rival will hit $20 by 2025                            
-",cardano millionaire predicts sub 1 xrp rival hit 20 2025,0.0
+",cardano millionaire predicts sub 1 xrp rival hit 20 2025,0.0,0.0,0.0,Neutral
 "
 
                                 XRP, SOL keep stunning the crypto market; This newcomer may rival them                            
-",xrp sol keep stunning crypto market newcomer may rival,0.5
+",xrp sol keep stunning crypto market newcomer may rival,0.5,0.3818,0.44089999999999996,Slightly Bullish
 "
 
                                 XRP has surged this year, here are 3 coins with the potential to rally higher                            
-",xrp surged year 3 coin potential rally higher,0.125
+",xrp surged year 3 coin potential rally higher,0.125,0.0,0.0625,Neutral
 "
 
                                 Emerging token gears for massive rally; Whales load up as XRP lags                            
-",emerging token gear massive rally whale load xrp lag,0.0
+",emerging token gear massive rally whale load xrp lag,0.0,-0.34,-0.17,Neutral
 "
 
                                 XRP falls below $2.5; experts see SEC overhaul boosting IntelMarkets demand                            
-",xrp fall 2 5 expert see sec overhaul boosting intelmarkets demand,-0.1
+",xrp fall 2 5 expert see sec overhaul boosting intelmarkets demand,-0.1,0.2263,0.06315,Neutral
 "
 
                                 XRP vs. Solana vs. PropiChain: The race to deliver 25,000% gains first                            
-",xrp v solana v propichain race deliver 25 000 gain first,0.25
+",xrp v solana v propichain race deliver 25 000 gain first,0.25,0.5267,0.38835,Slightly Bullish
 "
 
                                 XRP vs Lightchain AI: A clash of titans in the race for market leadership                            
-",xrp v lightchain ai clash titan race market leadership,0.0
+",xrp v lightchain ai clash titan race market leadership,0.0,0.0,0.0,Neutral
 "
 
                                 XRP down after $3 attempt, traders hedge with rival poised for massive rally                            
-",xrp 3 attempt trader hedge rival poised massive rally,0.0
+",xrp 3 attempt trader hedge rival poised massive rally,0.0,0.25,0.125,Neutral
 "
 
                                 Low-cap alternative set to take over XRP’s $6 target                            
-",low cap alternative set take xrp 6 target,0.0
+",low cap alternative set take xrp 6 target,0.0,-0.2732,-0.1366,Neutral
 "
 
                                 Experts highlight XRP, Cardano, PEPE, and XYZVerse as top bets                            
-",expert highlight xrp cardano pepe xyzverse top bet,0.5
+",expert highlight xrp cardano pepe xyzverse top bet,0.5,0.4939,0.49695,Slightly Bullish
 "
 
                                 Why did XRP price drop after Garlinghouse’s 60 Minutes interview?                            
-",xrp price drop garlinghouse 60 minute interview,0.0
+",xrp price drop garlinghouse 60 minute interview,0.0,-0.2732,-0.1366,Neutral
 "
 
                                 XRP faces market pressure as 1Fuel presale gains momentum with $500k raised                            
-",xrp face market pressure 1fuel presale gain momentum 500k raised,0.0
+",xrp face market pressure 1fuel presale gain momentum 500k raised,0.0,0.296,0.148,Neutral
 "
 
                                 XRP dominates this bull cycle with SEC clarity but DTX could be next with ETF launch                            
-",xrp dominates bull cycle sec clarity dtx could next etf launch,-0.05
+",xrp dominates bull cycle sec clarity dtx could next etf launch,-0.05,0.4404,0.1952,Neutral
 "
 
                                 CYBRO’s massive $7M presale sparks predictions it will surpass ADA and XRP by 2025                            
-",cybro massive 7m presale spark prediction surpass ada xrp 2025,0.0
+",cybro massive 7m presale spark prediction surpass ada xrp 2025,0.0,0.2263,0.11315,Neutral
 "
 
                                 Crypto expert GVR predicts $1,000 Binance Coin as investors Shift to LNEX, XRP                            
-",crypto expert gvr predicts 1 000 binance coin investor shift lnex xrp,0.0
+",crypto expert gvr predicts 1 000 binance coin investor shift lnex xrp,0.0,0.0,0.0,Neutral
 "
 
                                 XRP sees sharp decline as Dogecoin and Rollblock continue to build momentum                            
-",xrp see sharp decline dogecoin rollblock continue build momentum,-0.125
+",xrp see sharp decline dogecoin rollblock continue build momentum,-0.125,0.0,-0.0625,Neutral
 "
 
                                 XRP surges toward $3: This Ripple killer prepares for 39,504% rally                            
-",xrp surge toward 3 ripple killer prepares 39 504 rally,0.0
+",xrp surge toward 3 ripple killer prepares 39 504 rally,0.0,-0.6486,-0.3243,Slightly Bearish
 "
 
                                 XRP and ADA eye $3, analysts pick this altcoin for breakout potential                            
-",xrp ada eye 3 analyst pick altcoin breakout potential,0.0
+",xrp ada eye 3 analyst pick altcoin breakout potential,0.0,0.0,0.0,Neutral
 "
 
                                 Charts of the week: Bitcoin falls under $100,000 but XRP and TRON could extend rally                             
-",chart week bitcoin fall 100 000 xrp tron could extend rally,0.0
+",chart week bitcoin fall 100 000 xrp tron could extend rally,0.0,0.1779,0.08895,Neutral
 "
 
                                 3 bullish signals for XRP and altcoins for those who missed it at $0.50                            
-",3 bullish signal xrp altcoins missed 0 50,0.0
+",3 bullish signal xrp altcoins missed 0 50,0.0,-0.296,-0.148,Neutral
 "
 
                                 Worksport adopts Bitcoin and XRP for corporate treasury                            
-",worksport adopts bitcoin xrp corporate treasury,0.0
+",worksport adopts bitcoin xrp corporate treasury,0.0,0.3612,0.1806,Neutral
