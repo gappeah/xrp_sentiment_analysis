@@ -92,14 +92,9 @@ print(df)
 df.to_csv('crypto_headlines_sentiment_analysis.csv', index=False)
 
 
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Assuming df is the DataFrame created from the previous scraping and sentiment analysis code
-# Here is a sample DataFrame structure for reference
-# df = pd.DataFrame(data)
 
 # Step 1: Descriptive Statistics
 def descriptive_statistics(df):
