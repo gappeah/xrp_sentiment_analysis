@@ -8,6 +8,9 @@ from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # Step 1: Download NLTK resources
 nltk.download('punkt')
@@ -17,7 +20,7 @@ nltk.download('wordnet')
 # Function to scrape headlines from Crypto News
 def scrape_crypto_news():
     headlines = []
-    for page in range(1, 6):  # Cycle through 5 pages
+    for page in range(1, 6):
         url = f"https://crypto.news/page/{page}/?s=xrp"
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -28,7 +31,7 @@ def scrape_crypto_news():
 # Function to scrape titles from The Crypto Basic
 def scrape_crypto_basic():
     titles = []
-    for page in range(1, 6):  # Cycle through 5 pages
+    for page in range(1, 6):
         url = f"https://thecryptobasic.com/tag/ripple/page/{page}/"
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -58,75 +61,112 @@ def combine_data():
     return all_headlines
 
 # Step 3: Perform sentiment analysis using TextBlob
-def analyze_sentiment(headline):
+def analyze_sentiment_textblob(headline):
     analysis = TextBlob(headline)
     return analysis.sentiment.polarity
 
-# Step 4: Clean and preprocess the headlines
+# Step 4: Perform sentiment analysis using VADER
+def analyze_sentiment_vader(headline):
+    analyzer = SentimentIntensityAnalyzer()
+    score = analyzer.polarity_scores(headline)
+    return score['compound']
+
+# Step 5: Clean and preprocess the headlines
 def clean_text(text):
-    text = re.sub(r'\W', ' ', text)  # Remove special characters
-    text = text.lower()  # Convert to lowercase
-    text = text.split()  # Tokenize
+    text = re.sub(r'\W', ' ', text)
+    text = text.lower()
+    text = text.split()
     lemmatizer = WordNetLemmatizer()
     text = [lemmatizer.lemmatize(word) for word in text if word not in stopwords.words('english')]
     return ' '.join(text)
 
-# Step 5: Create a DataFrame and analyze sentiment
+# Step 6: Create a DataFrame and analyze sentiment
 data = []
 all_headlines = combine_data()
 for headline in all_headlines:
     cleaned_headline = clean_text(headline)
-    sentiment_score = analyze_sentiment(cleaned_headline)
+    textblob_score = analyze_sentiment_textblob(cleaned_headline)
+    vader_score = analyze_sentiment_vader(cleaned_headline)
+    average_score = (textblob_score + vader_score) / 2
+    sentiment_category = (
+        "Bullish" if average_score > 0.5 else
+        "Slightly Bullish" if 0.2 < average_score <= 0.5 else
+        "Neutral" if -0.2 <= average_score <= 0.2 else
+        "Slightly Bearish" if -0.5 <= average_score < -0.2 else
+        "Bearish"
+    )
     data.append({
         'headline': headline,
         'cleaned_headline': cleaned_headline,
-        'sentiment_score': sentiment_score
+        'textblob_score': textblob_score,
+        'vader_score': vader_score,
+        'average_score': average_score,
+        'sentiment_category': sentiment_category
     })
 
 df = pd.DataFrame(data)
 
-# Step 6: Display the DataFrame
+# Step 7: Display the DataFrame
 print(df)
 
-# Optional: Save the DataFrame to a CSV file
+# Step 8: Save the DataFrame to a CSV file
 df.to_csv('crypto_headlines_sentiment_analysis.csv', index=False)
 
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-
-# Step 1: Descriptive Statistics
+# Step 9: Descriptive Statistics
 def descriptive_statistics(df):
     print("Descriptive Statistics of Sentiment Scores:")
-    print(df['sentiment_score'].describe())
+    print(df[['textblob_score', 'vader_score', 'average_score']].describe())
 
-# Step 2: Visualize Sentiment Scores
+# Step 10: Visualize Sentiment Scores
 def visualize_sentiment(df):
-    # Set the style of seaborn
     sns.set(style="whitegrid")
 
-    # Histogram of sentiment scores
+    # TextBlob Sentiment Distribution
     plt.figure(figsize=(10, 6))
-    sns.histplot(df['sentiment_score'], bins=30, kde=True, color='blue')
-    plt.title('Distribution of Sentiment Scores')
-    plt.xlabel('Sentiment Score')
+    sns.histplot(df['textblob_score'], bins=30, kde=True, color='blue')
+    plt.title('Distribution of TextBlob Sentiment Scores')
+    plt.xlabel('TextBlob Sentiment Score')
     plt.ylabel('Frequency')
-    plt.axvline(df['sentiment_score'].mean(), color='red', linestyle='dashed', linewidth=1)
-    plt.axvline(df['sentiment_score'].median(), color='yellow', linestyle='dashed', linewidth=1)
-    plt.legend({'Mean': df['sentiment_score'].mean(), 'Median': df['sentiment_score'].median()})
     plt.show()
 
-    # Bar chart of sentiment score counts
+    # VADER Sentiment Distribution
     plt.figure(figsize=(10, 6))
-    sentiment_counts = df['sentiment_score'].value_counts(bins=10).sort_index()
-    sentiment_counts.plot(kind='bar', color='orange')
-    plt.title('Count of Sentiment Scores Binned')
-    plt.xlabel('Sentiment Score Bins')
-    plt.ylabel('Count')
-    plt.xticks(rotation=45)
+    sns.histplot(df['vader_score'], bins=30, kde=True, color='green')
+    plt.title('Distribution of VADER Sentiment Scores')
+    plt.xlabel('VADER Sentiment Score')
+    plt.ylabel('Frequency')
     plt.show()
 
-# Execute the functions
+    # TextBlob vs VADER Sentiment Scores
+    plt.figure(figsize=(10, 6))
+    sns.scatterplot(x='textblob_score', y='vader_score', data=df, hue='sentiment_category', palette='coolwarm')
+    plt.title('TextBlob vs VADER Sentiment Scores')
+    plt.xlabel('TextBlob Sentiment Score')
+    plt.ylabel('VADER Sentiment Score')
+    plt.axhline(0, color='red', linestyle='--')
+    plt.axvline(0, color='blue', linestyle='--')
+    plt.show()
+    
+    # Step 4: Plot the results using Seaborn
+fig, ax = plt.subplots(figsize=(10, 6))
+
+# Plot the results using seaborn
+sns.barplot(x="headline", y="vader_score", data=df, label="Vader Score", ax=ax)
+sns.barplot(x="headline", y="textblob_score", data=df, label="TextBlob Score", ax=ax)
+
+# Set title and labels
+ax.set_title("Sentiment Analysis of Cryptocurrency Headlines")
+ax.set_xlabel("Headlines")
+ax.set_ylabel("Sentiment Score")
+
+# Add legend
+ax.legend()
+
+# Step 11: Execute the functions
 descriptive_statistics(df)
 visualize_sentiment(df)
+
+# Step 12: Print Summary of Sentiment
+sentiment_summary = df['sentiment_category'].value_counts()
+print("\nSentiment Summary:")
+print(sentiment_summary)
