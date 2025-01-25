@@ -22,7 +22,7 @@ nltk.download('wordnet')
 def scrape_crypto_news():
     headlines = []
     dates = []
-    for page in range(1, 6):
+    for page in range(1, 15):
         url = f"https://crypto.news/page/{page}/?s=xrp"
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -38,7 +38,7 @@ def scrape_crypto_news():
 def scrape_crypto_basic():
     titles = []
     dates = []
-    for page in range(1, 6):
+    for page in range(1, 15):
         url = f"https://thecryptobasic.com/tag/ripple/page/{page}/"
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
@@ -110,7 +110,7 @@ for headline, date in zip(all_headlines, all_dates):
     average_score = (textblob_score + vader_score) / 2
     sentiment_category = (
         "Bullish" if average_score >= 0.5 else
-        "Slightly Bullish" if 0.2 < average_score < 0.5 else
+        "Slightly Bullish" if 0.2 < average_score < 0.4 else
         "Neutral" if -0.2 <= average_score <= 0.2 else
         "Slightly Bearish" if -0.5 <= average_score < -0.2 else
         "Bearish"
@@ -130,7 +130,7 @@ df = pd.DataFrame(data)
 df.to_csv('crypto_headlines_sentiment_analysis.csv', index=False)
 
 # Step 8: Visualization with date on the x-axis
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(15, 8))
 
 sns.barplot(x="date", y="vader_score", data=df, color="blue", label="Vader Score", ax=ax)
 sns.barplot(x="date", y="textblob_score", data=df, color="orange", label="TextBlob Score", ax=ax)
@@ -154,7 +154,7 @@ descriptive_statistics()
 
 # Step 8: Sentiment Distribution Visualizations
 # TextBlob Sentiment Distribution
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(15, 8))
 sns.histplot(df['textblob_score'], bins=30, kde=True, color='blue', label='TextBlob')
 plt.title('TextBlob Sentiment Distribution')
 plt.xlabel('Sentiment Score')
@@ -163,7 +163,7 @@ plt.legend()
 plt.show()
 
 # VADER Sentiment Distribution
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(15, 8))
 sns.histplot(df['vader_score'], bins=30, kde=True, color='orange', label='VADER')
 plt.title('VADER Sentiment Distribution')
 plt.xlabel('Sentiment Score')
@@ -172,7 +172,7 @@ plt.legend()
 plt.show()
 
 # TextBlob vs VADER Sentiment Scores
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(15, 8))
 scatter = sns.scatterplot(
     x='textblob_score',
     y='vader_score',
