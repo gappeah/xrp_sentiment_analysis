@@ -19,14 +19,54 @@ Transactions on the XRP Ledger are processed in a matter of seconds, with low tr
 ### Example of XRP Transaction (Pseudo Code)
 
 ```python
-# Pseudo code for an XRP transaction
-def send_xrp(sender, receiver, amount):
-    if sender.balance >= amount:
-        sender.balance -= amount
-        receiver.balance += amount
-        return "Transaction successful"
-    else:
-        return "Insufficient balance"
+# Example code for an XRP transaction
+from xrpl.clients import JsonRpcClient
+from xrpl.wallet import Wallet
+from xrpl.models import Payment
+from xrpl.transaction import safe_sign_and_submit_transaction
+from xrpl.account import get_balance
+from xrpl.utils import xrp_to_drops
+
+# Connect to the XRPL testnet
+TESTNET_URL = "https://s.altnet.rippletest.net:51234"
+client = JsonRpcClient(TESTNET_URL)
+
+# Generate sender and receiver wallets
+sender_wallet = Wallet.create()
+receiver_wallet = Wallet.create()
+
+print("Sender address:", sender_wallet.classic_address)
+print("Receiver address:", receiver_wallet.classic_address)
+
+# Fund sender wallet using testnet faucet
+print("Funding sender wallet...")
+client.request({
+    "command": "faucet",
+    "address": sender_wallet.classic_address
+})
+
+# Prepare payment transaction
+payment = Payment(
+    account=sender_wallet.classic_address,
+    amount=xrp_to_drops(22),  # Convert XRP to drops (1 XRP = 1,000,000 drops)
+    destination=receiver_wallet.classic_address,
+    fee="10"  # Minimum transaction fee in drops
+)
+
+# Sign and submit the transaction
+print("Submitting transaction...")
+response = safe_sign_and_submit_transaction(payment, client, sender_wallet)
+
+# Check transaction results
+if response.is_successful():
+    result = response.result
+    print("Transaction successful!")
+    print(f"Transaction hash: {result['hash']}")
+    print(f"Sender balance: {get_balance(sender_wallet.classic_address, client)} XRP")
+    print(f"Receiver balance: {get_balance(receiver_wallet.classic_address, client)} XRP")
+else:
+    print("Transaction failed:")
+    print(response.result)
 ```
 
 ## Project Description
